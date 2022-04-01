@@ -1,0 +1,64 @@
+{
+  "mod_elements": [
+    {
+      "name": "Xpreload",
+      "type": "enchantment",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xpreload"
+    },
+    {
+      "name": "XPReloadenchants",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "xp_reloadenchants",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "xpofplayer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "enchantment.christians_m_enchaments.xpreload": "XP Reload"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "christians_m_enchaments",
+    "modName": "Christian\u0027s Miscellaneous Enchaments",
+    "version": "1.0.0",
+    "author": "frank, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "modElementsPackage": "net.mcreator.christiansmenchaments",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100354000
+}

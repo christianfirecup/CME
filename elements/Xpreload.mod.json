@@ -1,0 +1,45 @@
+{
+  "_fv": 24,
+  "_type": "enchantment",
+  "definition": {
+    "name": "XP Reload",
+    "type": "CROSSBOW",
+    "rarity": "COMMON",
+    "minLevel": 1,
+    "maxLevel": 1,
+    "damageModifier": 0,
+    "compatibleEnchantments": [
+      {
+        "value": "POWER"
+      },
+      {
+        "value": "PUNCH"
+      },
+      {
+        "value": "FLAME"
+      },
+      {
+        "value": "UNBREAKING"
+      },
+      {
+        "value": "VANISHING_CURSE"
+      },
+      {
+        "value": "PIERCING"
+      },
+      {
+        "value": "QUICK_CHARGE"
+      }
+    ],
+    "compatibleItems": [
+      {
+        "value": "Items.CROSSBOW"
+      }
+    ],
+    "isTreasureEnchantment": false,
+    "isCurse": false,
+    "isAllowedOnBooks": true,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
+  }
+}
