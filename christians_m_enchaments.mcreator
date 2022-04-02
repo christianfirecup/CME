@@ -63,6 +63,34 @@
           }
         ]
       }
+    },
+    {
+      "name": "FireTouch",
+      "type": "enchantment",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_touch"
+    },
+    {
+      "name": "Firetouchprocedure",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "firetouchprocedure",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -77,7 +105,8 @@
   "language_map": {
     "en_us": {
       "enchantment.christians_m_enchaments.auto_smelt": "Auto Smelt",
-      "enchantment.christians_m_enchaments.xpreload": "XP Reload"
+      "enchantment.christians_m_enchaments.xpreload": "XP Reload",
+      "enchantment.christians_m_enchaments.fire_touch": "Fire Touch"
     }
   },
   "foldersRoot": {
