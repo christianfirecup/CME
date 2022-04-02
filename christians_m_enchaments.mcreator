@@ -23,6 +23,46 @@
           }
         ]
       }
+    },
+    {
+      "name": "AutoSmelt",
+      "type": "enchantment",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_smelt"
+    },
+    {
+      "name": "AutoSmeltfunny",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "auto_smeltfunny",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -36,6 +76,7 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "enchantment.christians_m_enchaments.auto_smelt": "Auto Smelt",
       "enchantment.christians_m_enchaments.xpreload": "XP Reload"
     }
   },
