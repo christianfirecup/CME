@@ -6,19 +6,18 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 
 import net.minecraft.world.World;
 import net.minecraft.item.ItemStack;
-import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.enchantment.EnchantmentHelper;
 
-import net.mcreator.christiansmenchaments.enchantment.FireTouchEnchantment;
+import net.mcreator.christiansmenchaments.enchantment.LifeStealEnchantment;
 import net.mcreator.christiansmenchaments.ChristiansMEnchamentsMod;
 
 import java.util.Map;
 import java.util.HashMap;
 
-public class FiretouchprocedureProcedure {
+public class LifeStealproProcedure {
 	@Mod.EventBusSubscriber
 	private static class GlobalTrigger {
 		@SubscribeEvent
@@ -48,36 +47,20 @@ public class FiretouchprocedureProcedure {
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		if (dependencies.get("entity") == null) {
-			if (!dependencies.containsKey("entity"))
-				ChristiansMEnchamentsMod.LOGGER.warn("Failed to load dependency entity for procedure Firetouchprocedure!");
-			return;
-		}
 		if (dependencies.get("sourceentity") == null) {
 			if (!dependencies.containsKey("sourceentity"))
-				ChristiansMEnchamentsMod.LOGGER.warn("Failed to load dependency sourceentity for procedure Firetouchprocedure!");
+				ChristiansMEnchamentsMod.LOGGER.warn("Failed to load dependency sourceentity for procedure LifeStealpro!");
 			return;
 		}
-		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if (entity instanceof PlayerEntity) {
-			if (EnchantmentHelper.getEnchantmentLevel(FireTouchEnchantment.enchantment,
-					((entity instanceof LivingEntity)
-							? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST)
-							: ItemStack.EMPTY)) == 1) {
-				sourceentity.setFire((int) 30);
-			}
-			if (EnchantmentHelper.getEnchantmentLevel(FireTouchEnchantment.enchantment,
-					((entity instanceof LivingEntity)
-							? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST)
-							: ItemStack.EMPTY)) >= 2) {
-				sourceentity.setFire((int) 40);
-			}
-			if (EnchantmentHelper.getEnchantmentLevel(FireTouchEnchantment.enchantment,
-					((entity instanceof LivingEntity)
-							? ((LivingEntity) entity).getItemStackFromSlot(EquipmentSlotType.CHEST)
-							: ItemStack.EMPTY)) >= 3) {
-				sourceentity.setFire((int) 40);
+		if (sourceentity instanceof PlayerEntity) {
+			if (EnchantmentHelper.getEnchantmentLevel(LifeStealEnchantment.enchantment,
+					((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)) >= 0) {
+				if (Math.random() <= 0.3) {
+					if (sourceentity instanceof LivingEntity)
+						((LivingEntity) sourceentity)
+								.setHealth((float) (((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHealth() : -1) + 1));
+				}
 			}
 		}
 	}

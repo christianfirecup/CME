@@ -91,6 +91,30 @@
           }
         ]
       }
+    },
+    {
+      "name": "LifeSteal",
+      "type": "enchantment",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "life_steal"
+    },
+    {
+      "name": "LifeStealpro",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "life_stealpro",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -104,6 +128,7 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "enchantment.christians_m_enchaments.life_steal": "Life Steal",
       "enchantment.christians_m_enchaments.auto_smelt": "Auto Smelt",
       "enchantment.christians_m_enchaments.xpreload": "XP Reload",
       "enchantment.christians_m_enchaments.fire_touch": "Fire Touch"

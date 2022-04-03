@@ -14,7 +14,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.enchantment.EnchantmentHelper;
 
 import net.mcreator.christiansmenchaments.enchantment.XpreloadEnchantment;
-import net.mcreator.christiansmenchaments.ChristiansMEnchamentsModVariables;
 import net.mcreator.christiansmenchaments.ChristiansMEnchamentsMod;
 
 import java.util.Map;
@@ -59,13 +58,6 @@ public class XPReloadenchantsProcedure {
 					ItemStack _setstack = new ItemStack(Items.ARROW);
 					_setstack.setCount((int) 1);
 					ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
-				}
-				{
-					double _setval = ((entity instanceof PlayerEntity) ? ((PlayerEntity) entity).experienceLevel : 0);
-					entity.getCapability(ChristiansMEnchamentsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.xpofplayer = _setval;
-						capability.syncPlayerVariables(entity);
-					});
 				}
 			}
 		}
